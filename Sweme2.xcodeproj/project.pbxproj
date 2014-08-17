@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DCA151C819A0E80D007019AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA151C719A0E80D007019AC /* AppDelegate.swift */; };
+		DCA151CA19A0E80D007019AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA151C919A0E80D007019AC /* ViewController.swift */; };
+		DCA151CD19A0E80D007019AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA151CB19A0E80D007019AC /* Main.storyboard */; };
+		DCA151CF19A0E80D007019AC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCA151CE19A0E80D007019AC /* Images.xcassets */; };
+		DCA151DB19A0E80D007019AC /* Sweme2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA151DA19A0E80D007019AC /* Sweme2Tests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DCA151D519A0E80D007019AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCA151BA19A0E80D007019AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCA151C119A0E80D007019AC;
+			remoteInfo = Sweme2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DCA151C219A0E80D007019AC /* Sweme2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sweme2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCA151C619A0E80D007019AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCA151C719A0E80D007019AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DCA151C919A0E80D007019AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DCA151CC19A0E80D007019AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DCA151CE19A0E80D007019AC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DCA151D419A0E80D007019AC /* Sweme2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sweme2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCA151D919A0E80D007019AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCA151DA19A0E80D007019AC /* Sweme2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sweme2Tests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DCA151BF19A0E80D007019AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCA151D119A0E80D007019AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DCA151B919A0E80D007019AC = {
+			isa = PBXGroup;
+			children = (
+				DCA151C419A0E80D007019AC /* Sweme2 */,
+				DCA151D719A0E80D007019AC /* Sweme2Tests */,
+				DCA151C319A0E80D007019AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DCA151C319A0E80D007019AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCA151C219A0E80D007019AC /* Sweme2.app */,
+				DCA151D419A0E80D007019AC /* Sweme2Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCA151C419A0E80D007019AC /* Sweme2 */ = {
+			isa = PBXGroup;
+			children = (
+				DCA151C719A0E80D007019AC /* AppDelegate.swift */,
+				DCA151C919A0E80D007019AC /* ViewController.swift */,
+				DCA151CB19A0E80D007019AC /* Main.storyboard */,
+				DCA151CE19A0E80D007019AC /* Images.xcassets */,
+				DCA151C519A0E80D007019AC /* Supporting Files */,
+			);
+			path = Sweme2;
+			sourceTree = "<group>";
+		};
+		DCA151C519A0E80D007019AC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCA151C619A0E80D007019AC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCA151D719A0E80D007019AC /* Sweme2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DCA151DA19A0E80D007019AC /* Sweme2Tests.swift */,
+				DCA151D819A0E80D007019AC /* Supporting Files */,
+			);
+			path = Sweme2Tests;
+			sourceTree = "<group>";
+		};
+		DCA151D819A0E80D007019AC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCA151D919A0E80D007019AC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DCA151C119A0E80D007019AC /* Sweme2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCA151DE19A0E80D007019AC /* Build configuration list for PBXNativeTarget "Sweme2" */;
+			buildPhases = (
+				DCA151BE19A0E80D007019AC /* Sources */,
+				DCA151BF19A0E80D007019AC /* Frameworks */,
+				DCA151C019A0E80D007019AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sweme2;
+			productName = Sweme2;
+			productReference = DCA151C219A0E80D007019AC /* Sweme2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DCA151D319A0E80D007019AC /* Sweme2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCA151E119A0E80D007019AC /* Build configuration list for PBXNativeTarget "Sweme2Tests" */;
+			buildPhases = (
+				DCA151D019A0E80D007019AC /* Sources */,
+				DCA151D119A0E80D007019AC /* Frameworks */,
+				DCA151D219A0E80D007019AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCA151D619A0E80D007019AC /* PBXTargetDependency */,
+			);
+			name = Sweme2Tests;
+			productName = Sweme2Tests;
+			productReference = DCA151D419A0E80D007019AC /* Sweme2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DCA151BA19A0E80D007019AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = mannan;
+				TargetAttributes = {
+					DCA151C119A0E80D007019AC = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					DCA151D319A0E80D007019AC = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = DCA151C119A0E80D007019AC;
+					};
+				};
+			};
+			buildConfigurationList = DCA151BD19A0E80D007019AC /* Build configuration list for PBXProject "Sweme2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DCA151B919A0E80D007019AC;
+			productRefGroup = DCA151C319A0E80D007019AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DCA151C119A0E80D007019AC /* Sweme2 */,
+				DCA151D319A0E80D007019AC /* Sweme2Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DCA151C019A0E80D007019AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCA151CD19A0E80D007019AC /* Main.storyboard in Resources */,
+				DCA151CF19A0E80D007019AC /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCA151D219A0E80D007019AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DCA151BE19A0E80D007019AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCA151CA19A0E80D007019AC /* ViewController.swift in Sources */,
+				DCA151C819A0E80D007019AC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCA151D019A0E80D007019AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCA151DB19A0E80D007019AC /* Sweme2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DCA151D619A0E80D007019AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCA151C119A0E80D007019AC /* Sweme2 */;
+			targetProxy = DCA151D519A0E80D007019AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DCA151CB19A0E80D007019AC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCA151CC19A0E80D007019AC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DCA151DC19A0E80D007019AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		DCA151DD19A0E80D007019AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DCA151DF19A0E80D007019AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = Sweme2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DCA151E019A0E80D007019AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = Sweme2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DCA151E219A0E80D007019AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sweme2.app/Sweme2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Sweme2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		DCA151E319A0E80D007019AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sweme2.app/Sweme2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Sweme2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DCA151BD19A0E80D007019AC /* Build configuration list for PBXProject "Sweme2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCA151DC19A0E80D007019AC /* Debug */,
+				DCA151DD19A0E80D007019AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCA151DE19A0E80D007019AC /* Build configuration list for PBXNativeTarget "Sweme2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCA151DF19A0E80D007019AC /* Debug */,
+				DCA151E019A0E80D007019AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DCA151E119A0E80D007019AC /* Build configuration list for PBXNativeTarget "Sweme2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCA151E219A0E80D007019AC /* Debug */,
+				DCA151E319A0E80D007019AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DCA151BA19A0E80D007019AC /* Project object */;
+}
