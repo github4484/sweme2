@@ -9,7 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-                            
+    let evaluator = Evaluator()
+    
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var textView: UITextView!
+    @IBAction func button() {
+        let expression = evaluator.parse(textField.text)
+        let evaluated = evaluator.eval(expression!)
+        textView.text = evaluated.toString()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

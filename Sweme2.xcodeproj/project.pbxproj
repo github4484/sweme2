@@ -12,6 +12,8 @@
 		DCA151CD19A0E80D007019AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA151CB19A0E80D007019AC /* Main.storyboard */; };
 		DCA151CF19A0E80D007019AC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCA151CE19A0E80D007019AC /* Images.xcassets */; };
 		DCA151DB19A0E80D007019AC /* Sweme2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA151DA19A0E80D007019AC /* Sweme2Tests.swift */; };
+		DCA151E519A0EB52007019AC /* Evaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA151E419A0EB52007019AC /* Evaluator.swift */; };
+		DCA151E919A0EBFC007019AC /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA151E819A0EBFC007019AC /* Expression.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 		DCA151D419A0E80D007019AC /* Sweme2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sweme2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA151D919A0E80D007019AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCA151DA19A0E80D007019AC /* Sweme2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sweme2Tests.swift; sourceTree = "<group>"; };
+		DCA151E419A0EB52007019AC /* Evaluator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evaluator.swift; sourceTree = "<group>"; };
+		DCA151E819A0EBFC007019AC /* Expression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expression.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				DCA151CB19A0E80D007019AC /* Main.storyboard */,
 				DCA151CE19A0E80D007019AC /* Images.xcassets */,
 				DCA151C519A0E80D007019AC /* Supporting Files */,
+				DCA151E419A0EB52007019AC /* Evaluator.swift */,
+				DCA151E819A0EBFC007019AC /* Expression.swift */,
 			);
 			path = Sweme2;
 			sourceTree = "<group>";
@@ -210,6 +216,8 @@
 			files = (
 				DCA151CA19A0E80D007019AC /* ViewController.swift in Sources */,
 				DCA151C819A0E80D007019AC /* AppDelegate.swift in Sources */,
+				DCA151E519A0EB52007019AC /* Evaluator.swift in Sources */,
+				DCA151E919A0EBFC007019AC /* Expression.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
