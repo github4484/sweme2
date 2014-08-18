@@ -2,8 +2,7 @@
 //  ViewController.swift
 //  Sweme2
 //
-//  Created by YOSHIHASHI Kenji on 8/17/14.
-//  Copyright (c) 2014 mannan. All rights reserved.
+//  Copyright (c) 2014 knj4484@gmail.com All rights reserved.
 //
 
 import UIKit
