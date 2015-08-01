@@ -4,7 +4,7 @@ class Environment {
     init(outer: Environment?) { self.outer = outer }
     func add(symbol: Symbol, expression: Expression) { vars[symbol.name] = expression }
     func lookup(symbol: Symbol)
-        -> Expression? { return vars[symbol.name] is Expression ? vars[symbol.name] : outer?.lookup(symbol) }
+        -> Expression! { return vars[symbol.name] is Expression ? vars[symbol.name] : outer?.lookup(symbol) }
 }
 class Evaluator {
     var rootEnv = Environment(outer: nil)
@@ -67,7 +67,7 @@ class Evaluator {
         let tokens = tokenize(input)
         return parseTokens(tokens, startIndex: tokens.startIndex, endIndex: tokens.endIndex).expression
     }
-    func parseTokens(tokens: Array<String>, startIndex: Int, endIndex: Int) -> (expression: Expression, lastIndex: Int) {
+    func parseTokens(tokens: [String], startIndex: Int, endIndex: Int) -> (expression: Expression, lastIndex: Int) {
         switch tokens[startIndex] {
         case "(": return readTillListEnd(tokens, startIndex: startIndex + 1, endIndex: endIndex)
         case "0", "1", "2", "3", "4", "5", "6", "7", "8", "9": return (Number(value: tokens[startIndex].toInt()!), startIndex)
@@ -75,7 +75,7 @@ class Evaluator {
         default: return (Symbol(name: tokens[startIndex]), startIndex)
         }
     }
-    func readTillListEnd(tokens: Array<String>, startIndex: Int, endIndex: Int) -> (expression : Expression, lastIndex: Int) {
+    func readTillListEnd(tokens: [String], startIndex: Int, endIndex: Int) -> (expression: Expression, lastIndex: Int) {
         var elements: [Expression] = []
         var nextIndex = startIndex
         while nextIndex < endIndex && tokens[nextIndex] != ")" {
