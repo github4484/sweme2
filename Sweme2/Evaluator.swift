@@ -4,7 +4,7 @@ class Environment {
     init(outer: Environment?) { self.outer = outer }
     func add(symbol: Symbol, expression: Expression) { vars[symbol.name] = expression }
     func lookup(symbol: Symbol)
-        -> Expression! { return vars[symbol.name] is Expression ? vars[symbol.name] : outer?.lookup(symbol) }
+        -> Expression! { return (vars[symbol.name] != nil) ? vars[symbol.name] : outer?.lookup(symbol) }
 }
 class Evaluator {
     var rootEnv = Environment(outer: nil)
@@ -13,7 +13,7 @@ class Evaluator {
         var nextIndex = input.startIndex
         while nextIndex != input.endIndex {
             let read = readNextToken(input, startIndex: nextIndex)
-            tokens += read.token!
+            tokens += [read.token!]
             nextIndex = read.nextIndex
         }
         return tokens
@@ -80,33 +80,33 @@ class Evaluator {
         var nextIndex = startIndex
         while nextIndex < endIndex && tokens[nextIndex] != ")" {
             let parsed = parseTokens(tokens, startIndex: nextIndex, endIndex: endIndex)
-            elements += parsed.expression
+            elements += [parsed.expression]
             nextIndex = parsed.lastIndex + 1
         }
         return (List(es: elements), nextIndex)
     }
     func eval(expression: Expression) -> Expression { return evalr(expression, env: rootEnv) }
-    func nv /* number value */ (v: Expression) -> Int { return (v as Number).value }
+    func nv /* number value */ (v: Expression) -> Int { return (v as! Number).value }
     func nvs /* number values */ (es: [Expression], env: Environment)
-        -> [Int] { return map(es[1..<countElements(es)]){ self.nv(self.evalr($0, env: env)) } }
+        -> [Int] { return map(es[1..<count(es)]){ self.nv(self.evalr($0, env: env)) } }
     func narithmetic(ns: [Int], op: (Int, Int) -> Int)
-        -> Number { return Number(value: reduce(ns[1..<countElements(ns)], ns[0], op)) }
+        -> Number { return Number(value: reduce(ns[1..<count(ns)], ns[0], op)) }
     func ncompare(ns: [Int], op: (Int, Int) -> Bool)
         -> Boolean { return Boolean(value: op(ns[0], ns[1])) }
     func bindParam(params: List, args: [Expression], outer: Environment) -> Environment {
         var env = Environment(outer: outer)
         for (idx, param) in enumerate(params.es) {
-            env.add(param as Symbol, expression: evalr(args[idx], env: env))
+            env.add(param as! Symbol, expression: evalr(args[idx], env: env))
         }
         return env
     }
     func evalr(expression: Expression, env: Environment) -> Expression {
         switch expression {
-        case let x where x is Procedure: return evalr((x as Procedure).body, env:env)
-        case let x where x is Symbol: return (env.lookup(x as Symbol) is Expression) ? env.lookup(x as Symbol)! : expression
+        case let x where x is Procedure: return evalr((x as! Procedure).body, env:env)
+        case let x where x is Symbol: return (env.lookup(x as! Symbol) != nil) ? env.lookup(x as! Symbol)! : expression
         case let x where x is List:
-            let l = x as List
-            switch (l.es[0] as Symbol).name {
+            let l = x as! List
+            switch (l.es[0] as! Symbol).name {
             case "+": return narithmetic(nvs(l.es, env: env)){ $0 + $1 }
             case "-": return narithmetic(nvs(l.es, env: env)){ $0 - $1 }
             case "*": return narithmetic(nvs(l.es, env: env)){ $0 * $1 }
@@ -119,9 +119,9 @@ class Evaluator {
                 var localEnv = Environment(outer: env)
                 var isName = true
                 var name: Symbol? = nil
-                for name_or_value in (l.es[1] as List).es {
+                for name_or_value in (l.es[1] as! List).es {
                     if isName {
-                        name = (name_or_value as Symbol)
+                        name = (name_or_value as! Symbol)
                     } else {
                         localEnv.add(name!, expression: evalr(name_or_value, env: env))
                     }
@@ -129,23 +129,23 @@ class Evaluator {
                 }
                 return evalr(l.es[2], env: localEnv)
             case "map":
-                let proc = evalr(l.es[2], env: env) as Procedure
-                let targets = evalr(l.es[1] as List, env: env) as List
+                let proc = evalr(l.es[2], env: env) as! Procedure
+                let targets = evalr(l.es[1] as! List, env: env) as! List
                 return List(es: map(targets.es){ self.evalr(proc, env: self.bindParam(proc.params, args: [$0], outer: env)) })
             case "defun":
-                env.add(l.es[1] as Symbol, expression: Procedure(params: l.es[2] as List, body: l.es[3] as List, lexicalEnv: env))
+                env.add(l.es[1] as! Symbol, expression: Procedure(params: l.es[2] as! List, body: l.es[3] as! List, lexicalEnv: env))
                 return Nil()
-            case "if":    return evalr(l.es[(evalr(l.es[1], env: env) as Boolean).value ? 2 : 3], env: env)
-            case "\\":    return Procedure(params: l.es[1] as List, body: l.es[2] as List, lexicalEnv: env)
-            case "quote": return List(es: (l.es[1] as List).es)
-            case "list":  return List(es: map(l.es[1..<countElements(l.es)]){ $0 }) // map is used to cnvert Slice to Array
-            case "first": return (l.es[1] as List).es[0]
+            case "if":    return evalr(l.es[(evalr(l.es[1], env: env) as! Boolean).value ? 2 : 3], env: env)
+            case "\\":    return Procedure(params: l.es[1] as! List, body: l.es[2] as! List, lexicalEnv: env)
+            case "quote": return List(es: (l.es[1] as! List).es)
+            case "list":  return List(es: map(l.es[1..<count(l.es)]){ $0 }) // map is used to cnvert Slice to Array
+            case "first": return (l.es[1] as! List).es[0]
             case "rest":
-                var src = l.es[1] as List
-                return List(es: map(src.es[1..<countElements(src.es)]){ $0 }) // map is used to cnvert Slice to Array
-            case let function where env.lookup(l.es[0] as Symbol):
-                let proc = env.lookup(l.es[0] as Symbol) as Procedure
-                return evalr(proc, env: bindParam(proc.params, args: map(l.es[1..<countElements(l.es)]){ $0 }, outer: env))
+                var src = l.es[1] as! List
+                return List(es: map(src.es[1..<count(src.es)]){ $0 }) // map is used to cnvert Slice to Array
+            case let function where (env.lookup(l.es[0] as! Symbol) != nil):
+                let proc = env.lookup(l.es[0] as! Symbol) as! Procedure
+                return evalr(proc, env: bindParam(proc.params, args: map(l.es[1..<count(l.es)]){ $0 }, outer: env))
             default: return Nil()
             }
         default: return expression
