@@ -189,9 +189,14 @@ class Evaluator {
                 return Procedure(params: l.es[1] as! List, body: l.es[2] as! List, lexicalEnv: env)
             case "quote":
                 return List(es: (l.es[1] as! List).es)
+            case "cons":
+                let car = evalr(l.es[1], env: env)
+                let cdr = (evalr(l.es[2], env: env) as! List).es
+                return List(es: [car] + cdr)
             case "list":
                 return List(es: map(l.es[1..<count(l.es)]){ $0 }) // map is used to cnvert Slice to Array
-            case "first": return (l.es[1] as! List).es[0]
+            case "first":
+                return (l.es[1] as! List).es[0]
             case "rest":
                 var src = l.es[1] as! List
                 return List(es: map(src.es[1..<count(src.es)]){ $0 }) // map is used to cnvert Slice to Array
