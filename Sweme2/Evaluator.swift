@@ -88,12 +88,16 @@ class Evaluator {
         switch tokens[startIndex] {
         case "(":
             return readTillListEnd(tokens, startIndex: startIndex + 1, endIndex: endIndex)
-        case "0", "1", "2", "3", "4", "5", "6", "7", "8", "9":
-            return (Number(value: tokens[startIndex].toInt()!), startIndex)
         case "+", "*", "-", "/", "%", "<", ">", "=", "\\":
             return (Symbol(name: tokens[startIndex]), startIndex)
         default:
-            return (Symbol(name: tokens[startIndex]), startIndex)
+            let token = tokens[startIndex]
+            switch token.substringToIndex(token.startIndex.successor()) {
+            case "0", "1", "2", "3", "4", "5", "6", "7", "8", "9":
+                return (Number(value: tokens[startIndex].toInt()!), startIndex)
+            default:
+                return (Symbol(name: tokens[startIndex]), startIndex)
+            }
         }
     }
 
