@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC7C8AD81B6DC228005A9000 /* a.html in Resources */ = {isa = PBXBuildFile; fileRef = DC7C8AD71B6DC228005A9000 /* a.html */; };
+		DC7C8ADA1B6DC623005A9000 /* b.html in Resources */ = {isa = PBXBuildFile; fileRef = DC7C8AD91B6DC623005A9000 /* b.html */; };
 		DCA151C819A0E80D007019AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA151C719A0E80D007019AC /* AppDelegate.swift */; };
 		DCA151CA19A0E80D007019AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA151C919A0E80D007019AC /* ViewController.swift */; };
 		DCA151CD19A0E80D007019AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA151CB19A0E80D007019AC /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC7C8AD71B6DC228005A9000 /* a.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = a.html; sourceTree = "<group>"; };
+		DC7C8AD91B6DC623005A9000 /* b.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = b.html; sourceTree = "<group>"; };
 		DCA151C219A0E80D007019AC /* Sweme2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sweme2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA151C619A0E80D007019AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCA151C719A0E80D007019AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 				DCA151C519A0E80D007019AC /* Supporting Files */,
 				DCA151E419A0EB52007019AC /* Evaluator.swift */,
 				DCA151E819A0EBFC007019AC /* Expression.swift */,
+				DC7C8AD71B6DC228005A9000 /* a.html */,
+				DC7C8AD91B6DC623005A9000 /* b.html */,
 			);
 			path = Sweme2;
 			sourceTree = "<group>";
@@ -196,7 +202,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCA151CD19A0E80D007019AC /* Main.storyboard in Resources */,
+				DC7C8AD81B6DC228005A9000 /* a.html in Resources */,
 				DCA151CF19A0E80D007019AC /* Images.xcassets in Resources */,
+				DC7C8ADA1B6DC623005A9000 /* b.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +413,7 @@
 				DCA151E019A0E80D007019AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DCA151E119A0E80D007019AC /* Build configuration list for PBXNativeTarget "Sweme2Tests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +422,7 @@
 				DCA151E319A0E80D007019AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
