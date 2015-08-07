@@ -10,10 +10,11 @@ import UIKit
 class ViewController: UIViewController {
     let evaluator = Evaluator()
     
-    @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var codeTextView: UITextView!
     @IBAction func button() {
-        let expression = evaluator.parse(textField.text)
+        let expression = evaluator.parse(codeTextView.text)
         let evaluated = evaluator.eval(expression!)
         textView.text = evaluated.toString()
     }
@@ -21,6 +22,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //let url: NSURL = NSURL(string: "http://www.yahoo.com")!
+        let path = NSBundle.mainBundle().pathForResource("a", ofType: "html")
+        let requestURL = NSURL(string: path!)
+        let request = NSURLRequest(URL: requestURL!)
+        webView.loadRequest(request)
     }
 
     override func didReceiveMemoryWarning() {
