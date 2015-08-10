@@ -24,10 +24,14 @@ class Evaluator {
     func getNextChar(input: String, nextIndex: String.Index)
         -> String { return input.substringWithRange(nextIndex..<advance(nextIndex, 1)) }
 
+    func a(input: String, index: String.Index, char: String) -> Bool {
+        return input.substringFromIndex(index).hasPrefix(char)
+    }
+
     func readNextToken(input :String, startIndex : String.Index) -> (token : String?, nextIndex : String.Index) {
         var nextIndex = startIndex
         while nextIndex != input.endIndex {
-            if input.substringFromIndex(nextIndex).hasPrefix(" ") {
+            if a(input, index: nextIndex, char: " ") || a(input, index: nextIndex, char: "\n") {
                 nextIndex++
             } else {
                 break
